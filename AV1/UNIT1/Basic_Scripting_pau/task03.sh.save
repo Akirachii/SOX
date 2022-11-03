@@ -1,0 +1,13 @@
+#!/bin/bash
+#AUTORA= PAU GRADOLI
+#
+#
+for x in $(ls -l /usr/bin/); do
+	echo "Working with : $x -> message "
+	
+	if []; then
+
+	fi
+
+done
+exit 0
