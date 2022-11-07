@@ -4,6 +4,7 @@ rc=0
 folder=/home/$1/Workspace
 folderarray=(config bin source rsrc)
 cr=0
+idk=0
 
 if [ $# -le 3 ]; then 
     id | grep -q $1 || rc=1    
@@ -48,7 +49,23 @@ if [ $# -le 3 ]; then
             fi
 
         elif [ $2 = "clean" ]; then
-            echo "clean selected"
+            if [ $# -eq 3 ]; then
+                if [ -e $3 ]; then
+                    test $3 || idk=1 
+                    if [ $idk -eq 0 ]; then
+                        rm -r $3                       
+                        echo "**[CORRECT] -- The folder selected has been erased"
+                    else
+                        echo "**[WARNING] -- The folder does not exist"
+                    fi
+                fi
+            else
+                echo "**[WARNING] -- Unexpected input"
+            fi
+
+
+
+
         else
             echo "**[WARNING] -- Unexpected input" 
         fi   
