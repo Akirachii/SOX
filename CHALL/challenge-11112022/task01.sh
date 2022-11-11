@@ -1,10 +1,7 @@
 #!/bin/bash
 #author=pau gradoli <3
 path=$HOME/games-paths/friday-for-friday
-
 datetoday=$(date +%I%M%S%d%m%Y)
-
-
 
 if [ $# -eq 1 ]; then
 	case $1 in
