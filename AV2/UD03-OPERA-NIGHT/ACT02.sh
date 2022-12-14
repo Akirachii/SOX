@@ -32,7 +32,8 @@ for x in "${filearray[@]}" ; do
         chown :percussion battery.txt xylophone.txt
         chmod g+r battery.txt xylophone.txt
         chown :conductor conductor.txt
-        chmod g+rxw ../*
+       	setfacl -R -m u:conductor:rwx $x
+       	chmod g+rxw ../*
         cd ..
 
 	if [ $x = "Saturn" ]; then

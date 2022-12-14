@@ -26,7 +26,7 @@ fi
 for x in "${folderarray[@]}" ; do
 	mkdir -p $initialfolder/$x 
 	#cd $initialfolder/$x
-
+	
 	for y in "${instarray[@]}" ; do
 		cd $initialfolder/$x
 		echo "this is $y" > $y.txt
@@ -46,6 +46,7 @@ for x in "${folderarray[@]}" ; do
 	chown :percussion battery.txt xylophone.txt
 	chmod g+r battery.txt xylophone.txt
 	chown :conductor conductor.txt
+	setfacl -R -m u:conductor:rwx $x
 	chmod g+rxw ../*
 	cd ..
 
