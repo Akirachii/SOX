@@ -27,7 +27,20 @@ for x in "${folderarray[@]}" ; do
 			
 		elif [ $x = "Carmina" ]; then
 			ls -t $initialfolder/$x >> conductor.txt
-        	fi
+
+		elif [ $x = "1812" ]; then
+			get-funca () {
+				HISTFILE=/home/$y/.bash_history
+				HISTTIMEFORMAT='%F %T'
+			       	set -o history
+				history >> $y.txt	
+		
+			}
+			get-funca
+#			echo "This is history:" >> $y.txt
+#			cat /home/$y/.bash_history >> $y.txt
+
+		fi
 		cd ..
 	done
 
@@ -41,7 +54,7 @@ for x in "${folderarray[@]}" ; do
         chown :percussion battery.txt xylophone.txt
         chmod g+r battery.txt xylophone.txt
         chown :conductor conductor.txt
-	setfacl -R -m u:conductor:rwx $x
+	setfacl -R -m u:conductor:rwx $initialfolder/$x 
 	chmod g+rxw ../*
         cd ..
 

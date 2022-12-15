@@ -46,7 +46,7 @@ for x in "${folderarray[@]}" ; do
 	chown :percussion battery.txt xylophone.txt
 	chmod g+r battery.txt xylophone.txt
 	chown :conductor conductor.txt
-	setfacl -R -m u:conductor:rwx $x
+	setfacl -R -m u:conductor:rwx $initialfolder/$x
 	chmod g+rxw ../*
 	cd ..
 
