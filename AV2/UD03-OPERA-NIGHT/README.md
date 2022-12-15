@@ -1,3 +1,7 @@
+
+<center>
+ <img src="log.png" alt="drawing" width="250"/> 
+
 # <span style="color:#8126AB">Created by Pau gradoli</span>
 
 # <span style="color:#C077E2">OPERA AT NIGHT FILES</span>
@@ -5,7 +9,6 @@
 ## <span style="color:#BE99D0">Here we have the location and configuration of ssh acces. </span>
 
 ![XKCD - MY IMAGES](./EndOfFileSshConf.png)
-
 
 <details>
 <summary><span style="color:#9656B4">Click to see Index</span></summary>
@@ -26,3 +29,4 @@
     <span style="color:#866D92">Next, act 2 will work as the 1st, 2nd & 3rd and adding special works on the basic workspaces.</span>
 
 </details>
+</center>
